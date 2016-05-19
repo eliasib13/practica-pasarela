@@ -7,7 +7,7 @@
  */
 
 if ($_POST['submit'])
-    echo 'Calling correct!';
+    echo 'Calling correct! - ' . $_POST['submit'];
 else {
     header("Location: ..");
     die();
