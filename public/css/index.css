@@ -1,4 +1,44 @@
 /** Colors **/
+/** Fonts **/
 html, body {
+  margin: 0;
+  border: 0;
+  padding: 5px;
   background-color: rgba(255, 244, 136, 0.3);
-  color: #47520b; }
+  color: #47520b;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.dashboard {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgba(255, 237, 60, 0.3);
+  border-radius: 5px; }
+  .dashboard .product {
+    width: 15%;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 7px;
+    background-color: rgba(128, 245, 255, 0.3);
+    border-radius: 10px; }
+    .dashboard .product .name {
+      font-size: 14pt;
+      font-weight: bold; }
+    .dashboard .product .price {
+      text-align: right;
+      color: #43b755;
+      font-size: 18pt; }
+    .dashboard .product input[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      border: 0;
+      padding: 5px 7px;
+      background-color: rgba(19, 87, 255, 0.77);
+      color: #fff;
+      font-size: 14px;
+      font-weight: bolder;
+      text-align: center;
+      border-radius: 20px;
+      cursor: pointer; }
+      .dashboard .product input[type="submit"]:hover {
+        background-color: rgba(70, 123, 255, 0.77); }

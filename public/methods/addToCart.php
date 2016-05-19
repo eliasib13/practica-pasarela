@@ -9,8 +9,8 @@
 if ($_POST['submit']) {
     echo 'Calling correct!<br>';
     echo 'ID: ' . $_POST['id'] . '<br>';
-    echo 'Name: ' . $_POST['nombre'] . '<br>';
-    echo 'Price: ' . $_POST['precio'] . '<br>';
+    echo 'Name: ' . $_POST['name'] . '<br>';
+    echo 'Price: ' . $_POST['price'] . '<br>';
 }
 else {
     header("Location: ..");

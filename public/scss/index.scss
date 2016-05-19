@@ -1,8 +1,66 @@
 /** Colors **/
 $general-background-color: rgba(255, 244, 136, 0.3);
 $general-text-color: rgb(71,82,11);
+$dashboard-background-color: darken($general-background-color, 15%);
+$product-background-color: rgba(128, 245, 255, 0.3);
+$price-text-color: rgb(67, 183, 85);
+$submit-background-color: rgba(19, 87, 255, 0.77);
+$submit-text-color: #fff;
+/** Fonts **/
+$general-font-family: Arial, Helvetica, sans-serif;
 
 html, body {
+  margin: 0;
+  border: 0;
+  padding: 5px;
   background-color: $general-background-color;
   color: $general-text-color;
+  font-family: $general-font-family;
+}
+
+.dashboard {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: $dashboard-background-color;
+  border-radius: 5px;
+
+  .product {
+    width: 15%;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 7px;
+    background-color: $product-background-color;
+    border-radius: 10px;
+
+    .name {
+      font-size: 14pt;
+      font-weight: bold;
+    }
+
+    .price {
+      text-align: right;
+      color: $price-text-color;
+      font-size: 18pt;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      border: 0;
+      padding: 5px 7px;
+      background-color: $submit-background-color;
+      color: $submit-text-color;
+      font-size: 14px;
+      font-weight: bolder;
+      text-align: center;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($submit-background-color, 10%);
+      }
+    }
+
+  }
 }
