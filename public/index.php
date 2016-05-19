@@ -9,6 +9,6 @@
 
 
 <h2>Test PHP form</h2>
-<form action="methods/call.php" method="get">
+<form action="methods/call.php" method="post">
     <input name="submit" type="submit" value="Do the call" />
 </form>
