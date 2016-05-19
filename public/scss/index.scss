@@ -1,0 +1,8 @@
+/** Colors **/
+$general-background-color: rgba(255, 244, 136, 0.3);
+$general-text-color: rgb(71,82,11);
+
+html, body {
+  background-color: $general-background-color;
+  color: $general-text-color;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "practica-pasarela",
+  "version": "1.0.0",
+  "description": "Práctica UNIR sobre la implemetnación de una pasarela de pagos.",
+  "license": "MIT",
+  "repository": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "sass": "^0.5.0"
+  }
+}
