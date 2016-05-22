@@ -15,7 +15,7 @@
     <h2>Ejemplo Pasarela de Pago</h2>
     <div class="dashboard">
         <div class="product">
-            <form action="methods/addToCart.php" method="post">
+            <form action="methods/paymentProcedure.php" method="post">
                 <input hidden name="id" type="number" value="1" />
                 <p class="name">Libreta roja</p>
                 <input hidden name="name" type="text" value="Libreta roja" />
@@ -25,7 +25,7 @@
             </form>
         </div>
         <div class="product">
-            <form action="methods/addToCart.php" method="post">
+            <form action="methods/paymentProcedure.php" method="post">
                 <input hidden name="id" type="number" value="2" />
                 <p class="name">Mochila 5L</p>
                 <input hidden name="name" type="text" value="Mochila 5L" />
@@ -35,7 +35,7 @@
             </form>
         </div>
         <div class="product">
-            <form action="methods/addToCart.php" method="post">
+            <form action="methods/paymentProcedure.php" method="post">
                 <input hidden name="id" type="number" value="3" />
                 <p class="name">Pluma estilográfica</p>
                 <input hidden name="name" type="text" value="Pluma estilográfica" />

@@ -42,3 +42,11 @@ html, body {
       cursor: pointer; }
       .dashboard .product input[type="submit"]:hover {
         background-color: rgba(70, 123, 255, 0.77); }
+    .dashboard .product .payment-data {
+      width: 75%;
+      margin: 0 auto 10px auto;
+      background-color: rgba(129, 223, 255, 0.3);
+      padding: 5px; }
+
+.full-width {
+  width: 96% !important; }
