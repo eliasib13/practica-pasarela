@@ -19,24 +19,28 @@ $terminalID = '00000003';
 $urlOK = getenv('HEROKU_ENV') ? 'http://practica-pasarela.herokuapp.com' : 'http://localhost:8888/practica-pasarela';
 $urlNOK = $urlOK;
 
-$numOperacion = substr(md5(microtime()),rand(0,26),50);
+$numOperacion = substr(md5(microtime()),rand(0,26),7);
 $importe = str_replace(',', '', $_POST['price']);
 
 $tipoMoneda = 978;
 $exponente = 2;
 $cifrado = 'SHA1';
 
-$firma = sha1($claveEncriptacion .
-            $merchantID .
-            $acquirerBIN .
-            $terminalID .
-            $numOperacion .
-            $importe .
-            $tipoMoneda .
-            $exponente .
-            $cifrado .
-            $urlOK .
-            $urlNOK);
+$cadena_firma = $claveEncriptacion .
+    $merchantID .
+    $acquirerBIN .
+    $terminalID .
+    $numOperacion .
+    $importe .
+    $tipoMoneda .
+    $exponente .
+    $cifrado .
+    $urlOK .
+    $urlNOK;
+
+$firma = sha1($cadena_firma);
+
+
 ?>
 
 <HEAD>
@@ -68,13 +72,13 @@ $firma = sha1($claveEncriptacion .
                     <b>Datos de pago:</b>
                     <table>
                         <tr>
-                            <td>Tarjeta:</td><td><INPUT NAME="PAN" TYPE=text VALUE=></td>
+                            <td>Tarjeta:</td><td><INPUT id="input-tarjeta" NAME="PAN" TYPE=text VALUE=></td>
                         </tr>
                         <tr>
-                            <td>Caducidad:</td><td><INPUT NAME="Caducidad" TYPE=number maxlength="6" placeholder="AAAAMM" VALUE=></td>
+                            <td>Caducidad:</td><td><INPUT id="input-caducidad" NAME="Caducidad" TYPE=number maxlength="6" placeholder="AAAAMM" VALUE=></td>
                         </tr>
                         <tr>
-                            <td>CVV2/CVC2:</td><td><INPUT NAME="CVV2" TYPE=text VALUE=></td>
+                            <td>CVV2/CVC2:</td><td><INPUT NAME="CVV2" id="input-cvc" TYPE=text VALUE=></td>
                         </tr>
                     </table>
                 </div>
@@ -83,4 +87,13 @@ $firma = sha1($claveEncriptacion .
             </FORM>
         </div>
     </div>
+    <script>
+        document.getElementById('input-tarjeta').addEventListener('keyup', function() {
+            if (document.getElementById('input-tarjeta').value == 'test') {
+                document.getElementById('input-tarjeta').value = '5540500001000004';
+                document.getElementById('input-caducidad').value = new Date().getFullYear() + '12';
+                document.getElementById('input-cvc').value = '989';
+            }
+        });
+    </script>
 </BODY>
