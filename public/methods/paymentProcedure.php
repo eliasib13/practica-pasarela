@@ -20,6 +20,7 @@ $urlOK = getenv('HEROKU_ENV') ? 'http://practica-pasarela.herokuapp.com' : 'http
 $urlNOK = $urlOK;
 
 $numOperacion = substr(md5(microtime()),rand(0,26),50);
+$importe = str_replace(',', '', $_POST['price']);
 
 $tipoMoneda = 978;
 $exponente = 2;
@@ -30,7 +31,7 @@ $firma = sha1($claveEncriptacion .
             $acquirerBIN .
             $terminalID .
             $numOperacion .
-            $_POST['price'] .
+            $importe .
             $tipoMoneda .
             $exponente .
             $cifrado .
@@ -58,7 +59,7 @@ $firma = sha1($claveEncriptacion .
                 <INPUT NAME="Firma" TYPE=hidden VALUE="<?php echo $firma; ?>">
                 <INPUT NAME="Cifrado" TYPE=hidden VALUE="<?php echo $cifrado; ?>">
                 <INPUT NAME="Num_operacion" TYPE=hidden VALUE="<?php echo $numOperacion; ?>">
-                <INPUT NAME="Importe" TYPE=hidden VALUE="<?php echo $_POST['price']; ?>">
+                <INPUT NAME="Importe" TYPE=hidden VALUE="<?php echo $importe; ?>">
                 <INPUT NAME="TipoMoneda" TYPE=hidden VALUE="<?php echo $tipoMoneda; ?>">
                 <INPUT NAME="Exponente" TYPE=hidden VALUE="<?php echo $exponente; ?>">
                 <INPUT NAME="Pago_soportado" TYPE=hidden VALUE="SSL">

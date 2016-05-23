@@ -20,7 +20,7 @@
                 <p class="name">Libreta roja</p>
                 <input hidden name="name" type="text" value="Libreta roja" />
                 <p class="price">8,95€</p>
-                <input hidden name="price" type="number" value="8.95" />
+                <input hidden name="price" type="text" value="8,95" />
                 <input name="submit" type="submit" value="Añadir al carro" />
             </form>
         </div>
@@ -30,7 +30,7 @@
                 <p class="name">Mochila 5L</p>
                 <input hidden name="name" type="text" value="Mochila 5L" />
                 <p class="price">17,95€</p>
-                <input hidden name="price" type="number" value="17.95" />
+                <input hidden name="price" type="text" value="17,95" />
                 <input name="submit" type="submit" value="Añadir al carro" />
             </form>
         </div>
@@ -40,7 +40,7 @@
                 <p class="name">Pluma estilográfica</p>
                 <input hidden name="name" type="text" value="Pluma estilográfica" />
                 <p class="price">13,49€</p>
-                <input hidden name="price" type="number" value="13.49" />
+                <input hidden name="price" type="text" value="13,49" />
                 <input name="submit" type="submit" value="Añadir al carro" />
             </form>
         </div>
