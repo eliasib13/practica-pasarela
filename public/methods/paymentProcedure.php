@@ -52,7 +52,7 @@ $firma = sha1($cadena_firma);
     <p>Se procederá al pago de la siguiente compra: </p>
     <div class="dashboard">
         <div class="product full-width">
-            <FORM ACTION="https://pgw.ceca.es/cgi-bin/tpv" METHOD="POST" ENCTYPE="application/xwww-form-urlencoded">
+            <FORM ACTION="http://tpv.ceca.es:8000/cgi-bin/tpv" METHOD="POST" ENCTYPE="application/xwww-form-urlencoded">
                 <p class="name"><?php echo $_POST['name'] ?></p>
                 <p class="price"><?php echo $_POST['price'] ?>€</p>
                 <INPUT NAME="MerchantID" TYPE=hidden VALUE="<?php echo $merchantID; ?>">
