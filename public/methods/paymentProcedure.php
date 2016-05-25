@@ -16,8 +16,8 @@ $merchantID = '082108630';
 $acquirerBIN = '0000554002';
 $terminalID = '00000003';
 
-$urlOK = getenv('HEROKU_ENV') ? 'http://practica-pasarela.herokuapp.com' : 'http://localhost:8888/practica-pasarela';
-$urlNOK = $urlOK;
+$urlOK = getenv('HEROKU_ENV') ? 'http://practica-pasarela.herokuapp.com/paymentOk.php' : 'http://localhost:8888/practica-pasarela/paymentOk.php';
+$urlNOK = getenv('HEROKU_ENV') ? 'http://practica-pasarela.herokuapp.com' : 'http://localhost:8888/practica-pasarela';
 
 $numOperacion = substr(md5(microtime()),rand(0,26),7);
 $importe = str_replace(',', '', $_POST['price']);
